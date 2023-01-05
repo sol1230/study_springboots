@@ -17,4 +17,25 @@ public class BoardController {
     // insert business
     return "/WEB-INF/views/board/list.jsp";
   }
+
+  @RequestMapping(
+    value = { "/board", "/board/list" },
+    method = RequestMethod.GET
+  )
+  public String list() {
+    // insert business
+    return "/WEB-INF/views/board/list.jsp";
+  }
+
+  @RequestMapping(value = "/board/view", method = RequestMethod.GET)
+  public String view() {
+    // insert business
+    return "/WEB-INF/views/board/view.jsp";
+  }
+
+  @RequestMapping(value = "/board/edit", method = RequestMethod.GET)
+  public String edit() {
+    // insert business
+    return "/WEB-INF/views/board/edit.jsp";
+  }
 }
