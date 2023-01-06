@@ -30,8 +30,12 @@
         </tbody>
     </table>
     <div>
-      <form action="/board_our/list"><button>go list</button></form>
-      <form action="/board_our/edit"><button>edit</button></form>
+      <form action="/board_our/list">
+        <button>go list</button>
+      </form>
+      <form action="/board_our/edit" method="post">
+        <button>edit</button>
+      </form>
     </div>
     </div>
     <script
