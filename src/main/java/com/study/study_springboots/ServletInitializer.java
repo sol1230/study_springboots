@@ -1,4 +1,4 @@
-package com.sol1230.study_springboots;
+package com.study.study_springboots;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

@@ -1,10 +1,10 @@
-package com.sol1230.study_springboots.controller;
+package com.study.study_springboots.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-@Controller
+// @Controller
 public class BoardController {
 
   @RequestMapping(value = "/board/form", method = RequestMethod.GET)
