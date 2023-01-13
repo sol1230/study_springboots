@@ -1,3 +1,5 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,35 +17,33 @@
   <body>
   <div class="container mt-3">
     <div class="container text-center mt-5 fs-3">Edit</div>
-      <table border="1" class="table table-striped">
-   <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Content</th>
-                    <th>User Name</th>
-                    <th>Date</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th><input class="from-control" type="text" name="title" id="" /></th>
-                    <th><input class="from-control" type="text" name="content" id="" /></th>
-                    <th><input class="from-control" type="text" name="userName" id="" /></th>
-                    <th><input class="from-control" type="date" name="date" id="" /></th>
-                </tr>
-      </tbody>
-    </table>
-    <form action="/board/list" method="get">
+    <form action="/board/save" method="post">
       <div>
-        <button class="btn btn-success">수정</button>
+        <label for="title">title</label>
+        <input type="text " class="form-control" name="title" id="title" />
+      </div>
+      <div>
+        <label for="userName">userName</label>
+        <input type="text" class="form-control" name="userName" id="userName" />
+      </div>
+      <div>
+        <label for="content">content</label>
+        <input type="text" class="form-control" name="content" id="content" />
+      </div>
+      <div>
+        <label for="date">content</label>
+        <input type="date" class="form-control" name="date" id="date" />
+      </div>
+      <div>
+        <button class="btn btn-success mt-2">수정</button>
       </div>
     </form>
+    </div>
      <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
-    </div>
 
   </body>
 </html>

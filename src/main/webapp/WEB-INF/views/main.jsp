@@ -15,7 +15,7 @@
 <body>
   <div class="container mt-3">
 
-    <div>Home ! JSP</div>
+    <div>main ! JSP</div>
     <div>Board</div>
         <div><a href="/board/form">board Controller Form</a></div>
 

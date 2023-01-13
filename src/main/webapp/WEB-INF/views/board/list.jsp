@@ -1,3 +1,7 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+
 <html lang="en">
   <head>
       <meta charset="UTF-8" />
@@ -15,39 +19,37 @@
     <div class="container mt-3">
     <div class="container text-center mt-5 fs-3">List</div>
       <table border="1" class="table table-striped">
-   <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Content</th>
-                    <th>User Name</th>
-                    <th>Date</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>USER</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>2023.01.01</td>
-                </tr>
-      </tbody>
+    <thead>
+            <tr>
+                <th scope=>#</th>
+                <th scope= class="col-9">Title</th>
+                <th scope=>user name</th>
+                <th scope=>date</th>
+            </tr>
+        </thead>
+        <tbody>
+        <c:forEach items="${boardList}" var="board" varStatus="status">
+            <tr>
+                <th scope=>${status.count}</th>
+                <td><a href="/board/view?title=${board.title}">${board.title}</a></td>
+                <td>${board.userName}</td>
+                <td>${board.date}</td>
+            </tr>
+            </c:forEach>
+        </tbody>
     </table>
-    <form action="/board/view" method="get">
-      <div>
-        <button class="btn btn-success">view</button>
-      </div>
-    </form>
-    <form action="/board/form" method="get">
-      <div>
-        <button class="btn btn-success">form</button>
-      </div>
-    </form>
+    <div>
+      <form action="/board/form">
+        <button class="btn btn-success mt-2">form</button>
+      </form>
+    </div>
+    </div>
+
       <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
-    </div>
   </body>
 </html>
 

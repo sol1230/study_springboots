@@ -1,3 +1,7 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+
 <html lang="en">
   <head>
       <meta charset="UTF-8" />
@@ -16,39 +20,35 @@
     <div class="container text-center mt-5 fs-3">View</div>
     
       <table border="1" class="table table-striped">
-   <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Content</th>
-                    <th>User Name</th>
-                    <th>Date</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>USER</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>2023.01.01</td>
-                </tr>
-      </tbody>
-    </table>
-    <form action="/board/list" method="get">
-      <div>
-        <button class="btn btn-success">List</button>
-      </div>
-    </form>
-    <form action="/board/edit" method="get">
-      <div>
+        <thead>
+          <tr>
+            <th class="col-1"scope=>Title</th>
+            <td class="col-6">${boardBean.title}</td>
+            <th >user name</th>
+            <td>${boardBean.userName}</td>
+            <th >date</th>
+            <td>${boardBean.date}</td>
+          </tr>
+        </thead>  
+        <tbody>
+          <th>Content</th>
+          <td colspan=6>${boardBean.content}</td>
+        </tbody>
+      </table>
+    <div class="d-flex">
+     <form action="/board/list">
+        <button class="btn btn-success me-2">List</button>
+      </form>
+     <form action="/board/edit" method="post">
         <button class="btn btn-success">Edit</button>
-      </div>
-    </form>
+     </form>
+    </div>
+    </div>
       <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
-    </div>
   </body>
 </html>
 
