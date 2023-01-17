@@ -3,7 +3,9 @@ package com.study.study_springboots.service;
 import com.study.study_springboots.beans.BoardBean;
 import java.util.ArrayList;
 import java.util.HashMap;
+import org.springframework.stereotype.Service;
 
+@Service
 public class DataInfors {
 
   public HashMap<String, String> getSearchFormData() {
@@ -89,6 +91,21 @@ public class DataInfors {
         boardBean.setDate("error");
       }
     }
+    return boardBean;
+  }
+
+  public BoardBean getDataByUid(HashMap<String, String> hashMap) {
+    String title = hashMap.get("title");
+    String content = hashMap.get("content");
+    String userName = hashMap.get("userName");
+    String date = hashMap.get("date");
+
+    BoardBean boardBean = new BoardBean();
+    boardBean.setTitle(title);
+    boardBean.setContent(content);
+    boardBean.setUserName(userName);
+    boardBean.setDate(date);
+
     return boardBean;
   }
 }
