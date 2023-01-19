@@ -16,7 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping(value = "/commonCodeOur")
 public class CommonCodeOurController {
   @Autowired
-  CommonCodeOurService commonCodeOurService; // DI
+  CommonCodeOurService commonCodeOurService;
 
   @RequestMapping(value = { "/insert" }, method = RequestMethod.POST)
   public ModelAndView insert(
@@ -67,7 +67,7 @@ public class CommonCodeOurController {
     @RequestParam Map<String, Object> params,
     ModelAndView modelAndView
   ) {
-    Object resultMap = commonCodeOurService.getList(params); // params가 서비스의 dataMap
+    Object resultMap = commonCodeOurService.getList(params);
     modelAndView.addObject("resultMap", resultMap);
     modelAndView.setViewName("commonCode_our/list");
     return modelAndView;
