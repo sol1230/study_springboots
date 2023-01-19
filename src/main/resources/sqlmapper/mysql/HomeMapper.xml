@@ -5,6 +5,7 @@
     <!-- call Home.selectFromANSWERSByQUESTIONS_UID -->
     <select id="selectFromANSWERSByQUESTIONS_UID" parameterType="Map" resultType="Map">
         select QUESTIONS_UID, EXAMPLE_UID
-        from ANSWERS
+        from ANSWERS 
+        where QUESTIONS_UID = #{QUESTION_UID}
     </select>
 </mapper>
